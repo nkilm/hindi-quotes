@@ -1,13 +1,16 @@
 const express = require("express");
+const jsonfile = require("jsonfile");
 
 const router = express.Router();
 
+const data = jsonfile.readFileSync("./data/hindiQuotes.json")
+
 router.get("/",(req,res)=>{
-    res.send("Namaste!");
+    res.json(data[Math.floor(Math.random()*data.length)]);
 })
 
-router.get("/:msg",(req,res)=>{
-    res.send(req.params.msg);
+router.get("/:type",(req,res)=>{
+    res.send(req.params.type);
 })
 
 module.exports = router
