@@ -1,0 +1,5 @@
+GET http://localhost:6060/quotes
+
+###
+GET http://localhost:6060/quotes/foobarbaz
+
