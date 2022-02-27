@@ -1,0 +1,19 @@
+{
+  "name": "hindi-quotes",
+  "author": "Nikhil Mohite",
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon ."
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "jsonfile": "^6.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "license": "ISC"
+}
