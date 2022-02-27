@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "express": "^4.17.3",
-    "jsonfile": "^6.1.0"
+    "mongodb": "^4.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
