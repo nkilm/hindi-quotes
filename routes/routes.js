@@ -10,8 +10,8 @@ const router = express.Router();
 router.get("/", (req, res) => {
     MongoClient.connect(URL, function (err, db) {
         if (err) throw err;
-        const dbo = db.db("Hindi_Quotes_REST_API");
-        dbo.collection("hindiQuotes").aggregate([
+        const dbo = db.db("hindi-quotes");
+        dbo.collection("hindi-quotes").aggregate([
             {
                 $project: {
                     _id: 0,
@@ -31,9 +31,9 @@ router.get("/", (req, res) => {
 router.get("/:type", (req, res) => {
     MongoClient.connect(URL, function (err, db) {
         if (err) throw err;
-        const dbo = db.db("Hindi_Quotes_REST_API");
+        const dbo = db.db("hindi-quotes");
 
-        dbo.collection("hindiQuotes")
+        dbo.collection("hindi-quotes")
             .aggregate([
                 {
                     $project: {
