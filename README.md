@@ -31,3 +31,10 @@ An array with JSON object
 Empty array
 
 ![Sample response for error](./demo/error.png)
+
+
+## To-Do
+
+- [] Reduce delay in fetching quote from the Database.
+- [] Add more types of quotes
+
