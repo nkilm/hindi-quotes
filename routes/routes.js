@@ -10,6 +10,11 @@ router.get("/", (req, res) => {
         if (err) throw err;
         const dbo = db.db("Hindi_Quotes_REST_API");
         dbo.collection("hindiQuotes").aggregate([
+            { $project : {
+                _id:0,
+                type:1,
+                quote:1
+            }},
             { $sample: { size: 1 } }
         ]).toArray(function (err, result) {
             if (err) throw err;
@@ -26,6 +31,11 @@ router.get("/:type", (req, res) => {
 
         dbo.collection("hindiQuotes")
             .aggregate([
+                { $project : {
+                    _id:0,
+                    type:1,
+                    quote:1
+                }},
                 { $match: { type: req.params.type } },
                 { $sample: { size: 1 } }
             ]).

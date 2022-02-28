@@ -1,6 +1,4 @@
 GET http://localhost:6060/hindiquote
 
 ###
-GET http://localhost:6060/hindiquote/love
-
-
+GET http://localhost:6060/hindiquote/success
