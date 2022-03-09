@@ -1,56 +1,19 @@
 const express = require("express");
-const MongoClient = require('mongodb').MongoClient;
-require('dotenv').config();
-
-// const URL = "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false"
-const URL = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@hindi-quotes.kamnn.mongodb.net/hindi-quotes?retryWrites=true&w=majority`
-
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    MongoClient.connect(URL, function (err, db) {
-        if (err) throw err;
-        const dbo = db.db("hindi-quotes");
-        dbo.collection("hindi-quotes").aggregate([
-            {
-                $project: {
-                    _id: 0,
-                    type: 1,
-                    quote: 1
-                }
-            },
-            { $sample: { size: 1 } }
-        ]).toArray(function (err, result) {
-            if (err) throw err;
-            res.json(result);
-            db.close();
-        });
-    });
+const data = require("../data/hindiQuotes");
+
+router.get("/",(req,res)=>{
+    res.json(data[Math.floor(Math.random()*data.length)]);
 })
 
-router.get("/:type", (req, res) => {
-    MongoClient.connect(URL, function (err, db) {
-        if (err) throw err;
-        const dbo = db.db("hindi-quotes");
-
-        dbo.collection("hindi-quotes")
-            .aggregate([
-                {
-                    $project: {
-                        _id: 0,
-                        type: 1,
-                        quote: 1
-                    }
-                },
-                { $match: { type: req.params.type } },
-                { $sample: { size: 1 } }
-            ]).
-            toArray(function (err, result) {
-                if (err) throw err;
-                res.json(result);
-                db.close();
-            });
-    });
+router.get("/:type",(req,res)=>{
+    const type_quote = data.filter((obj)=>{
+        if(obj.type===(req.params.type)){
+            return obj;
+        } 
+    })
+    res.json(type_quote[Math.floor(Math.random()*type_quote.length)]);
 })
 
 module.exports = router

@@ -1,4 +1,4 @@
-GET http://localhost:6060/hindiquote
+GET http://localhost:6060/hindiquote/random
 
 ###
-GET http://localhost:6060/hindiquote/success
+GET http://localhost:6060/hindiquote/random/success
