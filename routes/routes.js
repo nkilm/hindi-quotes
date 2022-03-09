@@ -1,9 +1,7 @@
 const express = require("express");
-const jsonfile = require("jsonfile");
-
 const router = express.Router();
 
-const data = jsonfile.readFileSync("./data/hindiQuotes.json")
+const data = require("../data/hindiQuotes");
 
 router.get("/",(req,res)=>{
     res.json(data[Math.floor(Math.random()*data.length)]);
