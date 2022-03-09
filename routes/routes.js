@@ -8,7 +8,12 @@ router.get("/",(req,res)=>{
 })
 
 router.get("/:type",(req,res)=>{
-    res.send(req.params.type);
+    const type_quote = data.filter((obj)=>{
+        if(obj.type===(req.params.type)){
+            return obj;
+        } 
+    })
+    res.json(type_quote[Math.floor(Math.random()*type_quote.length)]);
 })
 
 module.exports = router
