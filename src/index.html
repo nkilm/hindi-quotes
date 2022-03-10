@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,52 @@
     <title>Hindi Quotes</title>
     <link rel="stylesheet" href="./public/style.css">
 </head>
+
 <body>
-    <h1>Hindi Quotes REST API</h1>
+    <div class="heading">
+        <h1 id="title">हिन्दी Quotes REST API</h1>
+    </div>
+    <main class="container">
+        <div class="badges">
+
+            <a href="https://github.com/shadowoff09/lucifer-quotes/blob/main/LICENSE">
+                <img src="https://img.shields.io/github/license/shadowoff09/lucifer-quotes" alt="license" />
+            </a>
+
+        </div>
+
+        <h2 id="api">Usage</h2>
+
+        <h3>
+            <code>GET /random</code>
+        </h3>
+
+        <p>Response from API</p>
+        <pre>
+          <code>
+            {
+                "type": "positive",
+                "quote": "जिंदगी में कुछ नेक काम ऐसे भी करने चाहिए जिनका, उस ऊपर वालें के सिवा कोई दुसरा गवाह ना हो।"
+            }
+          </code>
+        </pre>
+
+        <h3>
+            <code>GET /hindiquotes/{type}</code>
+        </h3>
+
+        <p>Returns a quote(Object) of type <code>{type}</code> quotes e.g. <code>GET /api/quotes/5</code>.</p>
+
+
+        <pre>
+          <code>
+            {
+                "type": "success",
+                "quote": "जबतक आप खुद पर विश्वास नहीं करते, तबतक आप उपरवालें पर भी विश्वास नहीं कर सकते…"
+            }
+          </code>   
+        </pre>
+    </main>
 </body>
+
 </html>
