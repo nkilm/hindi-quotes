@@ -5,9 +5,17 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
-    font-size: 10px;
+    font-size: 62.5%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main > *{
+    margin-bottom: 1rem;
 }
 
 #title{
@@ -17,6 +25,21 @@ body{
     text-align: center;
 }
 
+.badges{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badges a{
+    margin-right: 1rem;
+}
+
+.code{
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+}
+
 main{
     font-size: 1rem;
 }
@@ -24,3 +47,12 @@ main{
 .container{
     margin: 0 14rem;
 }
+
+footer{
+    font-size: 1rem;
+}
+
+.contributing ul{
+    margin: 1rem 0 1rem 3rem;
+}
+
