@@ -14,10 +14,10 @@ app.use(cors({
     methods:['GET']
 }))
 
-app.get("/hindiquotes",(req,res)=>{
+app.get("/",(req,res)=>{
     res.sendFile(__dirname+"/index.html")
 })
 
-app.use("/hindiquotes/random",require("./routes/routes"))
+app.use("/random",require("./routes/routes"))
 
-app.listen(PORT,()=>console.log(`Listening on http://localhost:${PORT}/hindiquotes`))
+app.listen(PORT,()=>console.log(`Listening on http://localhost:${PORT}/`))
