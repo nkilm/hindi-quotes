@@ -2,10 +2,17 @@
 
 const express = require("express");
 const path = require("path");
+const cors = require("cors")
+
 const PORT = process.env.PORT | 6060;
 const app = express();
 
 app.use(express.static(path.join(__dirname,"public")));
+
+app.use(cors({
+    origin:"*",
+    methods:['GET']
+}))
 
 app.get("/hindiquotes",(req,res)=>{
     res.sendFile(__dirname+"/index.html")
