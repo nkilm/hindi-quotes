@@ -6,7 +6,10 @@
   "keywords": [],
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "start": "node ./src/server.js"
+  },
+  "engines": {
+    "node": "16.14.0"
   },
   "dependencies": {
     "express": "^4.17.3"
