@@ -21,3 +21,5 @@ app.get("/",(req,res)=>{
 app.use("/random",require("./routes/routes"))
 
 app.listen(PORT,()=>console.log(`Listening on http://localhost:${PORT}/`))
+
+module.exports = app;
