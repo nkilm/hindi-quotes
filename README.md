@@ -20,20 +20,20 @@ An API which display random हिन्दी Quotes.
 An array with JSON object
 
 ### Without parameter
-![Sample response without url parameter](./src/public/demo/sample.png)
+![Sample response without url parameter](./public/demo/noparam.png)
 
 ### With parameter
 
-![Sample response with url parameter](./src/public/demo/with-parameter.png)
+![Sample response with url parameter](./public/demo/param.png)
 
 
 ## Error response 
-Empty array
+JSON Object with Error Object and Status 400(Invalid Request)
 
-![Sample response for error](./src/public/demo/error.png)
+![Response for error](./src/public/demo/error.png)
 
 ## To-Do
 
 - [x] Reduce Time delay in fetching a quote from the Database
-- [ ] Handle Errors with better response
+- [x] Handle Errors with better response
 - [ ] Add more types of quote
