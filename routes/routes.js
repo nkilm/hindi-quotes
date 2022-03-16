@@ -13,6 +13,9 @@ router.get("/:type",(req,res)=>{
             return obj;
         } 
     })
+    if(!(type_quote.length)){
+        res.status(400).json({"Error":"Invalid Request,Check URL Parameters"})
+    }
     res.json(type_quote[Math.floor(Math.random()*type_quote.length)]);
 })
 
