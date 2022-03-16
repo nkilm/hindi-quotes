@@ -3,6 +3,11 @@
 
 An API which display random हिन्दी Quotes.
 
+## API 
+ ```html
+    https://hindi-quotes.vercel.app/random
+ ```
+
 ## Method
 
 - GET
@@ -20,17 +25,17 @@ An API which display random हिन्दी Quotes.
 An array with JSON object
 
 ### Without parameter
-![Sample response without url parameter](./public/demo/noparam.png)
+![Sample response without url parameter](./public/demo/noparam.jpg)
 
 ### With parameter
 
-![Sample response with url parameter](./public/demo/param.png)
+![Sample response with url parameter](./public/demo/param.jpg)
 
 
 ## Error response 
 JSON Object with Error Object and Status 400(Invalid Request)
 
-![Response for error](./src/public/demo/error.png)
+![Response for error](./public/demo/error.png)
 
 ## To-Do
 
