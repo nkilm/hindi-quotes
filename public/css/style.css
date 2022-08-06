@@ -1,78 +1,182 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.1s ease-in-out;
 }
 
-a{
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
     color: black;
     text-decoration: none;
 }
 
-body{
-    font-size: 62.5%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.gradient__text {
+    background: #121FCF;
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-main > *{
-    margin-bottom: 1rem;
+.gradient__bg {
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    background-attachment: fixed;
 }
 
-#title{
-    font-size: 2.5rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.repolink p{
-    font-size: 1.1rem;
-    display: block;
-    text-align: center;
-    margin-bottom: 0.8rem;
-}
-
-.badges{
+.flex-box {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.badges a{
-    margin-right: 1rem;
+.p-text {
+    font-weight: 400;
+    /* line-height: 2.5rem; */
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
 }
 
-#base-url{
-    font-family: 'Roboto Mono', monospace;
+header {
+    margin-top: 2.5rem;
 }
 
-.code{
-    background-color: #f5f5f5;
-    border-radius: 1rem;
+#title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    word-spacing: 0.8rem;
 }
 
-main{
-    font-size: 1rem;
+.repolink {
+    font-size: 1.6rem;
 }
 
-.container{
-    margin: 0 14rem;
+.repolink span {
+    color: #0e5ed4;
 }
 
-footer{
-    font-size: 1rem;
+.repolink a:hover {
+    font-size: 1.7rem;
+    color: #0e5ed4;
 }
 
-.contributing ul{
-    margin: 1rem 0 1rem 3rem;
+.container {
+    font-size: 1.5rem;
+    margin-top: 2rem;
 }
 
-.author ul{
-    margin: 0.5rem 0 3rem 3rem;
+.badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.badges img {
+    margin: 0 1rem;
+}
+
+.api-example {
+    margin: 2rem 0;
+}
+
+.api-example p:first-of-type {
+    padding-top: 1rem;
+    color: #2e8b57;
+    margin-bottom: 0.5rem;
+}
+
+#base-url a:hover {
+    font-size: 1.6rem;
+    color: #0e5ed4;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.contributing {
+    font-size: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-bottom: 3rem;
+}
+
+.contributing h2 {
+    margin-bottom: 1rem;
+}
+
+.contributing p {
+    margin-top: 0.2rem;
+}
+
+.author {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.author a:hover {
+    color: #0e5ed4;
+    font-size: 1.2rem;
+    border-bottom: 0.1rem solid #000;
 }
 
 
+@media screen and (max-width:750px){
+    html{
+        font-size: 10px;
+    }
+    .container{
+        margin: 2rem 8rem 0 8rem;
+    }
+}
 
+@media screen and (max-width: 550px) {
+    html{
+        font-size: 9px;
+    }
+    .container {
+        margin: 1rem 5rem 0 5rem;
+    }
+}
 
+@media screen and (max-width:410px){
+    html{
+        font-size: 8px;
+    }
+    .repolink{
+        margin: 0 2rem;
+    }
+    .badges{
+        flex-wrap: wrap;
+    }
+
+    .badges > *{
+        padding-top: 1rem;
+    }
+
+    
+    .container{
+        margin: 1rem 3rem 0 3rem;
+    }
+}

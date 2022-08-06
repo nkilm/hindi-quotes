@@ -9,85 +9,72 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-    <div class="heading">
-        <h1 id="title">हिन्दी Quotes REST API</h1>
-    </div>
-    <div class="repolink">
-        <p><span style="color:#0e5ed4">GitHub:</span> <a href="https://github.com/nkilm/hindi-quotes-REST-API" target="_">https://github.com/nkilm/hindi-quotes-REST-API</a> </p>
-    </div>
-    <main class="container">
+<body class="gradient__bg">
+    <header class="flex-box">
+        <div class="heading">
+            <h1 id="title" class="gradient__text">हिन्दी Quotes</h1>
+        </div>
+        <div class="repolink">
+            <p class="p-text"><span>GitHub:</span> <a href="https://github.com/nkilm/hindi-quotes"
+                    target="_">https://github.com/nkilm/hindi-quotes</a> </p>
+        </div>
+    </header>
+    <div class="container">
         <div class="badges">
-
-            <a href="">
-                <img id="licence" src="https://img.shields.io/badge/license-MIT-%2395c20d" alt="license" />
-            </a>
-
-            <a href="">
-                <img id="quotes" src="https://img.shields.io/badge/quotes-499-%2358a6ff" alt="number of quotes" />
-            </a>
-            
-            <a href="">
-                <img id="quotes" src="https://img.shields.io/github/last-commit/nkilm/hindi-quotes-REST-API" alt="number of quotes" />
-            </a>
-
+            <img id="licence" src="https://img.shields.io/badge/license-MIT-%2395c20d" alt="license" />
+            <img id="quotes" src="https://img.shields.io/badge/quotes-499-%2358a6ff" alt="number of quotes" />
+            <img id="quotes" src="https://img.shields.io/github/last-commit/nkilm/hindi-quotes" alt="last commit on" />
         </div>
 
-        <h2 id="api">Usage</h2>
+        <h2>Usage</h2>
 
-        <h3>
-            <code>GET /random</code>
-        </h3>
-        
-        <p id="base-url">URL: <a href="https://hindi-quotes.vercel.app/random">https://hindi-quotes.vercel.app/random</a></p>
-        <p>Response from API</p>
-        <div class="code">
-            <pre>
-              <code>
-                  {
-                    "type": "positive",
-                    "quote": "जिंदगी में कुछ नेक काम ऐसे भी करने चाहिए जिनका, उस ऊपर वालें के सिवा कोई दुसरा गवाह ना हो।"
-                }
-              </code>
-            </pre>
+        <div class="api-example p-text">
+            <h3>GET /random</h3>
+            <p id="base-url">URL: <a href="https://hindi-quotes.vercel.app/random"
+                    target="_blank">https://hindi-quotes.vercel.app/random</a></p>
+            <p>Returns a random quote(Object) of any type.</p>
+            <div class="code">
+                <pre class="pre">
+                  <code>
+    {
+        "type": "positive",
+        "quote": "मनुष्य अपने विश्वास से निर्मित होता हैं, जैसा वो विश्वास करता हैं वैसा वो बन जाता हैं.."
+    }
+                  </code>
+                </pre>
+            </div>
         </div>
 
-        <h3>
-            <code>GET /random/{type}</code>
-        </h3>
-
-        <p>Returns a quote(Object) of type <code>{type}</code> quotes. E.g. <code>GET /random/success</code>.</p>
-        <p id="base-url">URL: <a href="https://hindi-quotes.vercel.app/random/success">https://hindi-quotes.vercel.app/random/success</a></p>
-        <div class="code">
-            <pre>
-              <code>
-                {
-                    "type": "success",
-                    "quote": "जबतक आप खुद पर विश्वास नहीं करते, तबतक आप उपरवालें पर भी विश्वास नहीं कर सकते…"
-                }
-              </code>   
-            </pre>
+        <div class="api-example p-text">
+            <h3>GET /random/{type}</h3>
+            <p id="base-url">URL: <a href="https://hindi-quotes.vercel.app/random/success"
+                    target="_blank">https://hindi-quotes.vercel.app/random/success</a>
+            </p>
+            <p>Returns a quote(Object) of given type. E.g. <code>GET /random/success</code>.</p>
+            <div class="code">
+                <pre>
+                  <code>
+    {
+        "type": "success",
+        "quote": "किसी को हरा देना बेहद आसान है लेकिन, किसी को जीतना बेहद मुश्किल.."
+    }
+                  </code>   
+                </pre>
+            </div>
         </div>
-    </main>
-
-    
-    <footer class="container">
-        <div class="contributing">
-            <h2>Contibuting✨</h2>
-            <ul>
-                <li>Fork the Repositroy</li>
-                <li>Add new Quotes/Fix Errors</li>
-                <li>Submit Pull request</li>
-            </ul>
+        <div class="contributing p-text">
+            <h2>Contributing✨</h2>
+            <p>&rarr; Fork the Repository</p>
+            <p>&rarr; Add new Quotes/Fix Errors</p>
+            <p>&rarr; Submit Pull request</p>
         </div>
+    </div>
 
+
+    <footer class="p-text">
         <div class="author">
-            <h2>Author🎈</h2>
-            <ul>
-                <li><a href="https://github.com/nkilm" target="_">@nkilm</a></li>
-            </ul>
+            <p>Made with &#x2764;&#xFE0F by <a href="https://github.com/nkilm" target="_">Nikhil Mohite</a></p>
         </div>
-
     </footer>
 
 </body>
