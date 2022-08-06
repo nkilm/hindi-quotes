@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body class="flex-box gradient__bg">
+<body class="gradient__bg">
     <header class="flex-box">
         <div class="heading">
             <h1 id="title" class="gradient__text">हिन्दी Quotes</h1>
@@ -19,7 +19,7 @@
                     target="_">https://github.com/nkilm/hindi-quotes</a> </p>
         </div>
     </header>
-    <section class="container">
+    <div class="container">
         <div class="badges">
             <img id="licence" src="https://img.shields.io/badge/license-MIT-%2395c20d" alt="license" />
             <img id="quotes" src="https://img.shields.io/badge/quotes-499-%2358a6ff" alt="number of quotes" />
@@ -30,16 +30,16 @@
 
         <div class="api-example p-text">
             <h3>GET /random</h3>
-            <p id="base-url">URL: <a
-                    href="https://hindi-quotes.vercel.app/random">https://hindi-quotes.vercel.app/random</a></p>
+            <p id="base-url">URL: <a href="https://hindi-quotes.vercel.app/random"
+                    target="_blank">https://hindi-quotes.vercel.app/random</a></p>
             <p>Returns a random quote(Object) of any type.</p>
             <div class="code">
                 <pre class="pre">
                   <code>
-                    {
-                        "type": "positive",
-                        "quote": "जिंदगी में कुछ नेक काम ऐसे भी करने चाहिए जिनका, उस ऊपर वालें के सिवा कोई दुसरा गवाह ना हो।"
-                    }
+    {
+        "type": "positive",
+        "quote": "मनुष्य अपने विश्वास से निर्मित होता हैं, जैसा वो विश्वास करता हैं वैसा वो बन जाता हैं.."
+    }
                   </code>
                 </pre>
             </div>
@@ -47,17 +47,17 @@
 
         <div class="api-example p-text">
             <h3>GET /random/{type}</h3>
-            <p id="base-url">URL: <a
-                    href="https://hindi-quotes.vercel.app/random/success">https://hindi-quotes.vercel.app/random/success</a>
+            <p id="base-url">URL: <a href="https://hindi-quotes.vercel.app/random/success"
+                    target="_blank">https://hindi-quotes.vercel.app/random/success</a>
             </p>
             <p>Returns a quote(Object) of given type. E.g. <code>GET /random/success</code>.</p>
             <div class="code">
                 <pre>
                   <code>
-                    {
-                        "type": "success",
-                        "quote": "जबतक आप खुद पर विश्वास नहीं करते, तबतक आप उपरवालें पर भी विश्वास नहीं कर सकते…"
-                    }
+    {
+        "type": "success",
+        "quote": "किसी को हरा देना बेहद आसान है लेकिन, किसी को जीतना बेहद मुश्किल.."
+    }
                   </code>   
                 </pre>
             </div>
@@ -68,7 +68,7 @@
             <p>&rarr; Add new Quotes/Fix Errors</p>
             <p>&rarr; Submit Pull request</p>
         </div>
-    </section>
+    </div>
 
 
     <footer class="p-text">
