@@ -54,6 +54,10 @@ a:hover{
     word-spacing: 1px;
 }
 
+h3,h2{
+    font-weight: 600;
+}
+
 header {
     margin-top: 2.5rem;
 }
