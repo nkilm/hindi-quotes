@@ -37,6 +37,9 @@ JSON Object with Error Object and Status 400(Invalid Request)
 
 ![Response for error](./public/demo/error.png)
 
+## Contribution
+- Read [CONTRIBUTION.md](./CONTRIBUTION.md) for guidelines.
+
 ## To-Do
 
 - [x] Reduce Time delay in fetching a quote from the Database
