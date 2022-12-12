@@ -3,10 +3,7 @@
 
 An API which display random हिन्दी Quotes.
 
-## API 
- ```html
-    https://hindi-quotes.vercel.app/random
- ```
+> https://hindi-quotes.vercel.app/random
 
 ## Method
 
@@ -21,23 +18,45 @@ An API which display random हिन्दी Quotes.
  - /motivational
 
 ## Success response
+An array with JSON object <br>
 
-An array with JSON object
+> Without parameter
 
-### Without parameter
 ![Sample response without url parameter](./public/demo/noparam.jpg)
 
-### With parameter
+> With parameter
 
 ![Sample response with url parameter](./public/demo/param.jpg)
 
 
-## Error response 
-JSON Object with Error Object and Status 400(Invalid Request)
+> Error response - JSON Object with Error Object and Status 400(Invalid Request)
 
 ![Response for error](./public/demo/error.png)
 
-## Contribution
+
+# Development - How to setup locally?
+Check if `node` is installed
+```bash
+node -v
+
+# if this throws error, then install nodejs
+# link - https://nodejs.org/en/download/
+```
+
+#### Steps
+- After cloning the repository, `cd` to project folder
+```bash
+npm install 
+```
+- After all packages are installed, start the server
+```bash
+npm start
+
+# or
+nodemon server.js
+```
+
+## Contributing
 - Read [CONTRIBUTION.md](./CONTRIBUTION.md) for guidelines.
 
 ## To-Do
